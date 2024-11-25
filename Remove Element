@@ -1,0 +1,6 @@
+var removeElement = function(nums, val) {
+    let filteredArr=nums.filter(n=>n!==val)
+    nums.length=0
+    nums.push(...filteredArr)
+    return console.log(filteredArr.length,nums)
+};
