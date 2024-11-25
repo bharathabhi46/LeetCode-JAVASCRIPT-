@@ -1,0 +1,10 @@
+var strStr = function(haystack, needle) {
+    let n=needle.length
+    let m=haystack.length
+    for(let i=0;i<m;i++){
+        if(haystack.slice(i,i+n)===needle){
+            return i
+        }
+    }
+    return -1
+};
