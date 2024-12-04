@@ -1,0 +1,4 @@
+var mySqrt = function(x) {
+    let n=Math.sqrt(x)
+    return Math.floor(n)
+};
