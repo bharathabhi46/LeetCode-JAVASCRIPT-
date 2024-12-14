@@ -1,0 +1,13 @@
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+    let sum=''
+    for(let i=0;i<digits.length;i++){
+        sum=sum+digits[i]
+    }
+    let x=BigInt(sum)+1n
+    let a=String(x)
+    let newArr=[]
+    newArr.push(...a.split(''))
+    return newArr.map(Number)
+};
