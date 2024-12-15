@@ -1,0 +1,9 @@
+var merge = function(nums1, m, nums2, n) {
+    let n1=nums1.slice(0,m)
+    let n2=nums2.slice(0,n)
+    let merge=n1.concat(n2)
+    let sorted=merge.sort((a,b)=>a-b)
+    for(let i=0;i<m+n;i++){
+        nums1[i]=sorted[i]
+    }
+};
