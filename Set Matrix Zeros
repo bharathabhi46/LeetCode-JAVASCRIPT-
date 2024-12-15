@@ -1,0 +1,22 @@
+var setZeroes = function(a) {
+    let n=a.length
+    let m=a[0].length
+    let rows=new Array(n).fill(false)
+    let cols=new Array(m).fill(false)
+    for(let i=0;i<n;i++){
+        for(let j=0;j<m;j++){
+            if(a[i][j]===0){
+                rows[i]=true
+                cols[j]=true
+            }
+        }
+    }
+    for(let i=0;i<n;i++){
+        for(let j=0;j<m;j++){
+            if(rows[i] || cols[j]){
+                a[i][j]=0;
+            }
+        }
+    }
+    return a
+};
