@@ -1,0 +1,7 @@
+var climbStairs = function(n) {
+    let w=[1,2]
+    for(let i=2;i<=n;i++){
+        w[i]=w[i-1]+w[i-2]
+    }
+    return w[n-1]
+};
