@@ -1,0 +1,6 @@
+var reverseWords = function(s) {
+    let a=[]
+    let x=s.trim().split(/\s+/)
+    let rev=x.reverse().join(' ').toString()
+    return rev
+};
