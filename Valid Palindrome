@@ -1,0 +1,9 @@
+var isPalindrome = function(s) {
+    let a=s.trim().split(' ').join('').replaceAll(/[^a-zA-Z0-9]/g,'').toLowerCase()
+    let rev=a.split('').reverse().join('')
+    if(a===rev){
+        return true
+    }else{
+        return false
+    }
+};
