@@ -1,0 +1,16 @@
+var singleNumber = function(nums) {
+    let arr=[]
+    let a = Array.from(new Set(nums))
+    for(let i=0;i<a.length;i++){
+        let c=0
+        for(let j=0;j<nums.length;j++){
+            if(nums[j]===a[i]){
+                c++
+            }
+        }
+        if(c==1){
+            arr.push(a[i])
+        }
+    }
+    return arr[0]
+};
