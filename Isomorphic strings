@@ -1,0 +1,19 @@
+var isIsomorphic = function(s, t) {
+    const obj1={}
+    const obj2={}
+    for(let i=0;i<s.length;i++){
+        if(obj1[s[i]]){
+            if(obj1[s[i]]!==t[i]) return false
+        }else{
+            obj1[s[i]]=t[i]
+        }
+    }
+     for(let i=0;i<t.length;i++){
+        if(obj2[t[i]]){
+            if(obj2[t[i]]!==s[i]) return false
+        }else{
+            obj2[t[i]]=s[i]
+        }
+    }
+    return true
+};
