@@ -1,0 +1,4 @@
+var reverseBits = function(n) {
+    let x=n.toString(2).padStart(32,'0').split('').reverse().join('')
+    return parseInt(x,2)
+};
