@@ -1,0 +1,15 @@
+var isSubsequence = function(s, t) {
+   let s1= s.toLowerCase()
+    let t1=t.toLowerCase()
+    let n=t.length
+    let m=s.length
+    let c=0
+    let i=0,j=0
+    while(i<m && j<n){
+        if(s1[i].includes(t1[j])){
+        i++
+      }
+      j++
+    }
+    return i===m
+};
