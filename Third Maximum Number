@@ -1,0 +1,13 @@
+var thirdMax = function(nums) {
+    const seen = new Set(nums)
+    let newArr=[]
+    for(const value of seen){
+        newArr.push(value)
+    }
+    newArr.sort((a,b)=>b-a)
+    if(newArr.length<3){
+        return newArr[0]
+    }else{
+        return newArr[2]
+    }
+};
