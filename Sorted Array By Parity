@@ -1,0 +1,13 @@
+var sortArrayByParity = function(nums) {
+    let n=nums.length
+    let e=[]
+    let o=[]
+    for(let i=0;i<n;i++){
+        if(nums[i]%2===0){
+            e.push(nums[i])
+        }else{
+            o.push(nums[i])
+        }
+    }
+    return [...e,...o]
+};
