@@ -1,0 +1,13 @@
+var numJewelsInStones = function(jewels, stones) {
+    let x=jewels.split('')
+    let y=stones.split('')
+    let c=0
+    for(let i=0;i<x.length;i++){
+        for(let j=0;j<y.length;j++){
+            if(x[i]===y[j]){
+                c++
+            }
+        }
+    }
+    return c
+};
