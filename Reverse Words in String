@@ -1,0 +1,8 @@
+var reverseWords = function(s) {
+    let a=s.split(' ')
+    let str=''
+    for(let i=0;i<a.length;i++){
+      str+=a[i].split('').reverse().join('')+' '
+    }
+    return str.slice(0,str.length-1)
+};
