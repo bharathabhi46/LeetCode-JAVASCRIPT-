@@ -1,0 +1,4 @@
+var toLowerCase = function(s) {
+    let c=s.toLowerCase()
+    return c
+};
