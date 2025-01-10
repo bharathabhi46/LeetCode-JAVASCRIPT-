@@ -1,0 +1,10 @@
+var getNoZeroIntegers = function(n) {
+    let noZeros=(num)=>!num.toString().includes('0')
+    for(let i=1;i<n;i++){
+        let j=n-i
+            if(noZeros(i)&&noZeros(j)){
+                return [i,j]
+            }
+    }
+    return []
+};
