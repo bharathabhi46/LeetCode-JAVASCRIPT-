@@ -1,0 +1,12 @@
+var largestAltitude = function(gain) {
+    let highAlt=0
+    let alt=0
+    let n=gain.length
+    for(let i=0;i<n;i++){
+        alt=alt+gain[i]
+        if(alt>highAlt){
+            highAlt=alt
+        }
+    }
+    return highAlt
+};
