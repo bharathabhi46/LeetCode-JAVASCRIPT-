@@ -1,0 +1,8 @@
+var truncateSentence = function(s, k) {
+    let a=s.split(' ')
+    let str=''
+    for(let i=0;i<k;i++){
+        str=str+a[i]+' '
+    }
+    return str.trim()
+};
