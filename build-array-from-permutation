@@ -1,0 +1,12 @@
+#include<stdlib.h>
+int*buildArray(int*nums,int numsize,int*returnsize){
+    *returnsize=numsize;
+    int*ans=(int*)malloc(sizeof(int)*numsize);
+    if(ans==NULL){
+        return NULL;
+    }
+for(int i=0;i<numsize;i++){
+    ans[i]=nums[nums[i]];
+}
+return ans;
+}
