@@ -1,0 +1,20 @@
+var findGCD = function(nums) {
+    let n = nums.length;
+    let min = nums[0];
+    let max = nums[0];
+    
+    for (let i = 1; i < n; i++) {
+        if (nums[i] < min) {
+            min = nums[i];
+        }
+        if (nums[i] > max) {
+            max = nums[i];
+        }
+    }
+
+    for (let i = min; i >= 1; i--) {
+        if (min % i === 0 && max % i === 0) {
+            return i;
+        }
+    }
+};
