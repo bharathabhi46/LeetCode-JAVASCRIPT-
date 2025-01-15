@@ -1,0 +1,8 @@
+var convertTemperature = function(celsius) {
+    let kel=celsius+273.15
+    let fah=((9/5)*celsius)+32
+    let a=[]
+    a.push(kel)
+    a.push(fah)
+    return a
+};
