@@ -1,0 +1,4 @@
+var reduce = function(nums, fn, init) {
+    let sum=nums.reduce(fn,init)
+    return sum
+};
