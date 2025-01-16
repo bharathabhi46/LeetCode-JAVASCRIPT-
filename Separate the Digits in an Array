@@ -1,0 +1,9 @@
+var separateDigits = function(nums) {
+let s=nums.toString().replace(/,/g,'').split('')
+let str=s.length
+let arr=[]
+for(let i=0;i<str;i++){
+  arr.push(Number(s[i]))
+}
+return arr 
+};
