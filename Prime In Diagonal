@@ -1,0 +1,28 @@
+var diagonalPrime = function(nums) {
+    const isPrime=function(num){
+        if(num<2) return false
+        for(let i=2;i<=Math.sqrt(num);i++){
+        if(num%i===0) return false
+        }
+        return true
+    }
+    let n=nums.length
+    let a=[]
+    for(let i=0;i<n;i++){
+        if(isPrime(nums[i][i])){
+        a.push(nums[i][i])
+        }
+        if(i!==n-1-i && isPrime(nums[i][n-1-i])){
+            a.push(nums[i][n-1-i])
+    }
+}
+if(a.length===0) return 0
+    let m=a[0]
+    for(let i=1;i<a.length;i++){
+        if(a[i]>m){
+            m=a[i]
+        }
+    }
+    
+    return m
+};
