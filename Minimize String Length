@@ -1,0 +1,5 @@
+var minimizedStringLength = function(s) {
+    x=s.split('')
+    const seen = new Set(x)
+    return seen.size
+};
