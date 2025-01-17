@@ -1,0 +1,4 @@
+function argumentsLength(...args: any[]): number {
+    // Return the length of the 'args' array, which corresponds to the number of arguments
+    return args.length;
+}
