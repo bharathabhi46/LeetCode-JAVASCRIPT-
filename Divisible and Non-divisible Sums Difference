@@ -1,0 +1,20 @@
+var differenceOfSums = function(n, m) {
+    let d=[]
+    let nd=[]
+    for(let i=1;i<=n;i++){
+        if(i%m===0){
+            d.push(i)
+        }else{
+            nd.push(i)
+        }
+    }
+    let sum1=0
+    let sum2=0
+    for(let i=0;i<d.length;i++){
+        sum1+=d[i]
+    }
+    for(let i=0;i<nd.length;i++){
+        sum2+=nd[i]
+    }
+    return sum2-sum1
+};
