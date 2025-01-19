@@ -1,0 +1,17 @@
+var maxLength = function(nums) {
+    let gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+    let lcm = (a, b) => (a * b) / gcd(a, b);
+    let maxLen = 1, n = nums.length;
+    for (let i = 0; i < n; i++) {
+        let prod = 1, subGcd = 0, subLcm = 1;
+        for (let j = i; j < n; j++) {
+            prod *= nums[j];
+            subGcd = gcd(subGcd, nums[j]);
+            subLcm = lcm(subLcm, nums[j]);
+            if (prod === subGcd * subLcm) {
+                maxLen = Math.max(maxLen, j - i + 1);
+            }
+        }
+    }
+    return maxLen;
+};
