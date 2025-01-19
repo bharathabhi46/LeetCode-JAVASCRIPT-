@@ -1,0 +1,9 @@
+var convertDateToBinary = function(date) {
+let b=date.split('-')
+let str=''
+for(let i=0;i<b.length;i++){
+  let newStr=parseInt(b[i])
+  str+=newStr.toString(2)+'-'
+}
+return str.slice(0,str.length-1)
+};
