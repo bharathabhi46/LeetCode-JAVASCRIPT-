@@ -1,0 +1,14 @@
+var zigzagTraversal = function(grid) {
+    let result = [];
+    let skip = false;
+
+    for (let i = 0; i < grid.length; i++) {
+        let row = i % 2 === 0 ? grid[i] : grid[i].slice().reverse();
+        for (let j = 0; j < row.length; j++) {
+            if (!skip) result.push(row[j]);
+            skip = !skip;
+        }
+    }
+
+    return result;
+};
