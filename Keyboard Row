@@ -1,0 +1,25 @@
+var findWords = function (words) {
+    let arr = []
+    let firrow = "qwertyuiop"
+    let secrow = "asdfghjkl"
+    let thirow = "zxcvbnm"
+    for (let i = 0; i < words.length; i++) {
+        let w = words[i].toLowerCase()
+        let fi = true, se = true, th = true
+        for (let k = 0; k < w.length; k++) {
+            if (!firrow.includes(w[k])) {
+                fi = false
+            }
+            if (!secrow.includes(w[k])) {
+                se = false
+            }
+            if (!thirow.includes(w[k])) {
+                th = false
+            }
+        }
+        if (fi || se || th) {
+            arr.push(words[i])
+        }
+    }
+    return arr
+};
