@@ -1,0 +1,12 @@
+var toHex = function(num) {
+    if(num===0){
+        return num.toString()
+    }
+    if(num>0){
+        return num.toString(16)
+    }
+    if(num<0){
+        let x=(num>>>0).toString(16)
+        return x
+    }
+};
