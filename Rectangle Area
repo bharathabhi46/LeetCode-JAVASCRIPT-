@@ -1,0 +1,22 @@
+var computeArea = function(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
+    let areaOfRec1=0
+    let areaofRec2=0
+    //AREA OF RECTANGLE 1
+    let len1=Math.abs(bx2-bx1)
+    let bre1=Math.abs(by2-by1)
+    areaOfRec1=len1*bre1
+    //AREA OF RECTANGLE 2
+    let len2=Math.abs(ax2-ax1)
+    let bre2=Math.abs(ay2-ay1)
+    areaOfRec2=len2*bre2
+    //OVERLAP AREA
+    let xMax=Math.max(ax1,bx1)
+    let xMin=Math.min(ax2,bx2)
+    let yMax=Math.max(ay1,by1)
+    let yMin=Math.min(ay2,by2)
+    let len3=Math.max(0,xMin-xMax)
+    let bre3=Math.max(0,yMin-yMax)
+    let overLapArea=len3*bre3
+    let total=areaOfRec1+areaOfRec2-overLapArea
+    return total
+};
