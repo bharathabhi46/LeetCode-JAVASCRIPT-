@@ -1,0 +1,12 @@
+var countBits = function (n) {
+    let arr = []
+    for (let i = 0; i <= n; i++) {
+        let sum = 0
+        let bit = i.toString(2)
+        for (let j = 0; j < bit.length; j++) {
+            sum += parseInt(bit[j])
+        }
+        arr.push(sum)
+    }
+    return arr
+};
