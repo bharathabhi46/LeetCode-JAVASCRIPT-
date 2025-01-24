@@ -1,0 +1,13 @@
+var alternateDigitSum = function(n) {
+    let s=n.toString()
+    let even=0
+    let odd=0
+    for(let i=0;i<s.length;i++){
+        if(i%2===0){
+            odd+=parseInt(s[i],10)
+        }else{
+            even+=parseInt(s[i],10)
+        }
+    }
+    return odd-even
+};
