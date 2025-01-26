@@ -1,0 +1,17 @@
+var countEven = function (num) {
+    let sum = 0
+    let c = 0
+    for (let i = 1; i <= num; i++) {
+        sum = 0
+        let a=i
+            while (a != 0) {
+                let b = a % 10
+                sum += b
+                a = Math.floor(a / 10)
+            }
+            if (sum % 2 == 0) {
+                c=c+1
+            }
+        }
+    return c
+};
