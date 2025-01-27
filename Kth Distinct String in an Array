@@ -1,0 +1,20 @@
+var kthDistinct = function(arr, k) {
+    let a=[]
+    let c=0
+    for(let i=0;i<arr.length;i++){
+      c=0
+      for(let j=0;j<arr.length;j++){
+        if(arr[i]==arr[j]){
+            c++
+        }
+      }
+      if(c==1){
+        a.push(arr[i])
+      }
+    }
+    if(a.length<k){
+        return ""
+    }else{
+        return a[k-1]
+    }
+};
