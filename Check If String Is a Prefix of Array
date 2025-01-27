@@ -1,0 +1,16 @@
+var isPrefixString = function(s, words) {
+let str=''
+let can=false
+for(let i=0;i<words.length;i++){
+    str+=words[i]
+    if(str===s){
+        can=true
+        break
+    }
+}
+if(can){
+    return true
+}else{
+    return false
+}
+}; 
