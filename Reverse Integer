@@ -1,0 +1,12 @@
+var reverse = function(x) {
+    let s=x.toString()
+    let s1=x.toString().split('').reverse().join('')
+    if(s.includes("-")){
+        s1="-"+s1.slice(0,-1)
+    }
+    let rev=Number(s1)
+    if(rev< Math.pow(-2,31) || rev> Math.pow(2,31)-1){
+        return 0
+    }
+    return rev
+};
