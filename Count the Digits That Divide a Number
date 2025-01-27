@@ -1,0 +1,12 @@
+var countDigits = function(num) {
+    let c=0
+    let n=num
+    while(n!=0){
+        let a=n%10
+        if(num%a==0){
+            c++
+        }
+        n=Math.floor(n/10)
+    }
+    return c
+};
