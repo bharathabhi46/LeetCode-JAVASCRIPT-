@@ -1,0 +1,10 @@
+var firstPalindrome = function(words) {
+    let n=words.length
+    for(let i=0;i<n;i++){
+        let s=words[i].split('').reverse().join('')
+        if(s===words[i]){
+            return words[i]
+        }
+    }
+    return ''
+};
