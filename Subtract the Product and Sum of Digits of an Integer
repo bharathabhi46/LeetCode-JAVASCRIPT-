@@ -1,0 +1,10 @@
+var subtractProductAndSum = function(n) {
+    let pro=1;
+    let add=0;
+    let arr=n.toString().split('')
+    for(let i=0;i<arr.length;i++){
+        pro=pro*parseInt(arr[i])
+        add=add+parseInt(arr[i])
+    }
+    return pro-add
+};
