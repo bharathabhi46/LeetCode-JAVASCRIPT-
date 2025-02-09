@@ -1,0 +1,21 @@
+var majorityElement = function(nums) {
+    let n=nums.length
+    if(n==1){
+        return [nums[0]]
+    }
+    let c=0
+    let arr=[]
+    for(let i=0;i<n;i++){
+        c=0
+        for(let j=0;j<n;j++){
+            if(nums[i]==nums[j]){
+                c++
+            }
+        }
+        if(c>n/3){
+           arr.push(nums[i])
+        }
+    }
+    let seen=Array.from(new Set(arr))
+    return seen
+};
