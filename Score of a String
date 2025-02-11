@@ -1,0 +1,16 @@
+var scoreOfString = function(s) {
+    let a=s.split('')
+    let b=[]
+    for(let i=0;i<a.length;i++){
+        b.push(a[i].charCodeAt(0))
+    }
+    let c=[]   
+    for(let i=0;i<b.length-1;i++){
+        c.push(Math.abs(b[i]-b[i+1]))
+    }
+    let sum=0
+    for(let i=0;i<c.length;i++){
+        sum+=c[i]
+    }
+    return sum
+};
