@@ -1,0 +1,9 @@
+var minBitFlips = function(start, goal) {
+    let bit=start^goal
+    let c=0
+    while(bit!==0){
+        c+=bit&1
+        bit=bit>>1
+    }
+    return c
+};
