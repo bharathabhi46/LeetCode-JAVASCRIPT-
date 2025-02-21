@@ -1,0 +1,17 @@
+var shuffle = function(nums, n) {
+    let a1=[]
+    let a2=[]
+    let a3=[]
+    for(let i=0;i<n;i++){
+        a1.push(nums[i])
+    }
+    for(let j=n;j<nums.length;j++){
+        a2.push(nums[j])
+    }
+    for(let i=0;i<nums.length;i++){
+      a3.push(a1[i])
+      a3.push(a2[i])
+    }
+
+    return a3.slice(0,nums.length)
+};
