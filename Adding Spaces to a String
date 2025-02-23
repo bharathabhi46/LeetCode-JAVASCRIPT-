@@ -1,0 +1,11 @@
+var addSpaces = function(s, spaces) {
+    let result=[]
+    let seen= new Set(spaces)
+    for(let i=0;i<s.length;i++){
+        if(seen.has(i)){
+            result.push(' ')
+        }
+        result.push(s[i])
+    }
+    return result.join('')
+};
