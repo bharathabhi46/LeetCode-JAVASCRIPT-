@@ -1,0 +1,17 @@
+var sortSentence = function(s) {
+    let a=s.split(' ')
+    let b=[]
+    for(let i=0;i<a.length;i++){
+        b.push(a[i].at(-1))
+    }
+    let str=''
+    b.sort((a,b)=>a-b)
+    for(let j=0;j<b.length;j++){
+        for(let k=0;k<a.length;k++){
+            if(a[k].includes(b[j])){
+            str+= a[k].slice(0,a[k].length-1) + ' '
+            }
+        }
+    }
+    return str.slice(0,str.length-1)
+}
