@@ -1,0 +1,18 @@
+var reversePrefix = function(word, ch) {
+    let ind=-1
+    for(let i=0;i<word.length;i++){
+        if(word[i]===ch){
+            ind=i
+            break;
+        }
+    }
+    if(ind===-1){
+        return word
+    }
+    let str=word.slice(0,ind+1)
+    
+    let r=str.split('').reverse().join('')
+    let str2=word.slice(ind+1)
+    let re=r+str2
+    return re
+};
