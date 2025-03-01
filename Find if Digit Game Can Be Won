@@ -1,0 +1,18 @@
+var canAliceWin = function(nums) {
+    let sum1=0
+    let sum2=0
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]<10){
+            sum1+=nums[i]
+        }
+    }
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]>=10){
+            sum2+=nums[i]
+        }
+    }
+    if(sum1>sum2 || sum1<sum2){
+        return true
+    }
+    return false
+};
