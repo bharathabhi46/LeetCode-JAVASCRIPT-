@@ -1,0 +1,21 @@
+var rowAndMaximumOnes = function(mat) {
+    let c=0
+    let o=0
+    let ind=0
+    let n=mat.length
+    let m=mat[0].length
+    for(let i=0;i<n;i++){
+        c=0
+        for(let j=0;j<m;j++){
+            if(mat[i][j]===1){
+                c++
+            }
+        }
+        if(c>o){
+            ind=i
+            o=c
+        }
+    }
+    let arr=[ind,o]
+    return arr
+};
