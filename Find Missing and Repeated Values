@@ -1,0 +1,18 @@
+var findMissingAndRepeatedValues = function (grid) {
+    let n = grid.length
+    let m = grid[0].length
+    let seen=new Set()
+    let d
+    let sum=0
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            sum+=grid[i][j]
+            if(seen.has(grid[i][j])){
+                d=grid[i][j]
+            }
+            seen.add(grid[i][j])
+        }
+    }
+    let no=n*n*(n*n+1)/2-(sum-d)
+return [d,no]
+};
