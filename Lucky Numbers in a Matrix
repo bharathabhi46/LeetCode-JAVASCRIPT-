@@ -1,0 +1,28 @@
+var luckyNumbers = function (matrix) {
+    let n = matrix.length
+    let m = matrix[0].length
+    let no;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            no = matrix[i][j]
+            let min = true
+            for (let k = 0; k < m; k++) {
+                if (no > matrix[i][k]) {
+                    min = false
+                    break
+                }
+            }
+            let max = true
+            for (let g = 0; g < n; g++) {
+                if (no < matrix[g][j]) {
+                    max = false
+                    break
+                }
+            }
+            if (min && max) {
+                return [no]
+            }
+        }
+    }
+    return []
+};
