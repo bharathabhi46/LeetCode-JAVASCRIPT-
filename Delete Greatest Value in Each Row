@@ -1,0 +1,18 @@
+var deleteGreatestValue = function (grid) {
+    let n = grid.length
+    let sum = 0
+    for(let i=0;i<n;i++){
+        grid[i].sort((a,b)=>a-b)
+    }
+    let m=grid[0].length
+   for (let j = 0; j < m; j++) {
+        let maxInColumn = 0;
+
+        for (let i = 0; i < n; i++) {
+            maxInColumn = Math.max(maxInColumn, grid[i][j]);
+        }
+
+        sum += maxInColumn;
+    }
+    return sum
+};
