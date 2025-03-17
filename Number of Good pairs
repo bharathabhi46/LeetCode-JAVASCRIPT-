@@ -1,0 +1,14 @@
+var numIdenticalPairs = function(nums) {
+    let n=nums.length
+    let c=0
+    for(let i=0;i<n;i++){
+        for(let j=0;j<n;j++){
+            if(i<j){
+                if(nums[i]===nums[j]){
+                    c++
+                }
+            }
+        }
+    }
+    return c
+};
