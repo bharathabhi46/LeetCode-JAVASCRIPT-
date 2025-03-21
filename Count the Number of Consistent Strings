@@ -1,0 +1,18 @@
+var countConsistentStrings = function(allowed, words) {
+    let c=0
+    let e=0
+    let n=words.length
+    for(let i=0;i<n;i++){
+        e=0
+        let m=words[i].length
+        for(let j=0;j<m;j++){
+            if(allowed.includes(words[i][j])){
+                e++
+            }
+        }
+        if(e===m){
+            c++
+        }
+    }
+    return c
+};
