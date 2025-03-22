@@ -1,0 +1,9 @@
+var restoreString = function(s, indices) {
+    let n=indices.length
+    let str=[]
+    for(let i=0;i<n;i++){
+        let no=indices[i]
+        str[no]=s[i]
+    }
+    return str.join('')
+};
