@@ -1,0 +1,13 @@
+var mostWordsFound = function(sentences) {
+  let c=0
+  let v=0
+  let n=sentences.length
+  for(let i=0;i<n;i++){
+    let a=sentences[i].split(' ').length
+    c=a
+    if(c>v){
+        v=c
+    }
+  }  
+  return v
+};
