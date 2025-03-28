@@ -1,0 +1,18 @@
+var findIntersectionValues = function(nums1, nums2) {
+    let a=[]
+    let c=0
+    for(let i=0;i<nums1.length;i++){
+        if(nums2.includes(nums1[i])){
+            c++
+        }
+    }
+    a.push(c)
+    c=0
+    for(let i=0;i<nums2.length;i++){
+        if(nums1.includes(nums2[i])){
+            c++
+        }
+    }
+    a.push(c)
+    return a
+};
