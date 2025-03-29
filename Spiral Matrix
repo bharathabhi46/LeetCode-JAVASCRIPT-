@@ -1,0 +1,44 @@
+import java.util.*;
+
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> result = new ArrayList<>();
+        if (matrix.length == 0) return result;
+
+        int start = 0, startEnd = matrix.length - 1;
+        int last = 0, lastEnd = matrix[0].length - 1;
+
+        while (start <= startEnd && last <= lastEnd) {
+            for (int j = last; j <= lastEnd; j++) result.add(matrix[start][j]);
+            start++;
+            for (int i = start; i <= startEnd; i++) result.add(matrix[i][lastEnd]);
+            lastEnd--;
+            if (start <= startEnd) {
+                for (int j = lastEnd; j >= last; j--) result.add(matrix[startEnd][j]);
+                startEnd--;
+            }
+            if (last <= lastEnd) {
+                for (int i = startEnd; i >= start; i--) result.add(matrix[i][last]);
+                last++;
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int matrix[][] = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+        Solution solution = new Solution();
+        List<Integer> result = solution.spiralOrder(matrix);
+        System.out.println(result);
+        sc.close();
+    }
+}
