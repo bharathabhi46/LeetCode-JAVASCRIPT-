@@ -1,0 +1,30 @@
+class Solution {
+    public boolean areOccurrencesEqual(String s) {
+        int n =s.length();
+        int c=0;
+        char firstChar=s.charAt(0);
+        for(int j=0;j<n;j++){
+            if(s.charAt(j)==firstChar){
+                c++;
+            }
+        }
+        for(int i=0;i<n;i++){
+            int count=0;
+            for(int j=0;j<n;j++){
+                 if(s.charAt(i)==s.charAt(j)){
+                    count++;
+                }
+            }
+            if(count!=c){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        Solution solution = new Solution();
+        System.out.print(solution.areOccurrencesEqual(s));
+    }
+}
