@@ -1,0 +1,5 @@
+var isPalindrome = function(x) {
+    let digit=x.toString()
+    let result=digit.split('').reverse().join('')
+    return result===digit
+};
