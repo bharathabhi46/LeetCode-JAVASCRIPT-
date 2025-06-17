@@ -22,5 +22,5 @@ var countServers = function (grid) {
             }
         }
     }
-    return co
+    return co;
 };
