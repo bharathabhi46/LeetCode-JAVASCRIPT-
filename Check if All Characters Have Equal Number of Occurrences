@@ -28,3 +28,4 @@ class Solution {
         System.out.print(solution.areOccurrencesEqual(s));
     }
 }
+eaf
