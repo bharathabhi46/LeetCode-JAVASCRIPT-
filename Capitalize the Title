@@ -10,3 +10,4 @@ var capitalizeTitle = function(title) {
     }
     return str.slice(0,-1)
 };
+daily starl maintain
